@@ -1,4 +1,4 @@
-# Liri-  a node application.
+# Liri -  a node application.
 
 To install all necessary npm packages run these commands in lir derectory:
 * npm install 
