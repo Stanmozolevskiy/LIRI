@@ -8,8 +8,6 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 var fs = require("fs");
 
 module.exports.getConcerts = (artist) => {
-   artist = artist || "J Lo"
-  
 
     var url = `https://rest.bandsintown.com/artists/${artist}/events?app_id=${bands}`;
 
@@ -21,6 +19,7 @@ module.exports.getConcerts = (artist) => {
         //loops through all the venues outputting each
         let eventLen = eventData.length;
         for (let i = 0; i < eventLen; i++) {
+            console.log("")
             console.log("|-----------------" + artist + "-----------------|");
             console.log('\t\t' + eventData[i].venue.name);
             console.log('\t\t' + eventData[i].venue.city + ", " + eventData[i].venue.region);

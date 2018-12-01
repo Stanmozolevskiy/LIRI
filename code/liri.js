@@ -10,40 +10,47 @@ var  searchSpotify = require("./spotify.js");
 var  searchOMDB = require("./omdb.js");
 var  searchBands = require("./bands.js");
 var moment = require('moment');
+var inquirer = require("inquirer");
 
-// users input
-var input = process.argv[2];
-var arg = process.argv[3];
+// INQUIRER PART
+var choices = [
+    {
+        type: 'list',
+        name: 'choise',
+        message: 'Waht would you like to search?',
+        choices: [
+			'Song',
+			'Movie',
+			'Music concerts    /has to be existing consert'
+            ]
+	},]
+	inquirer.prompt(choices).then(answerOne => {
+		let imput = answerOne.choise
+		var questions = [
+			{
+				type: 'input',
+				name: 'userChoise',
+				message: "What is the name of it???",
+			},
+		] 
+		inquirer.prompt(questions).then(answers => {
+				let arg = answers.userChoise;
+				// console.log(answers.userChoise);
+				// console.log(imput)
+				Newsearch(imput, arg)
+		})
 
-var switchFuncion = (input, arg) => {
-    switch (input) {
-	case "spotify-this-song":
-		searchSpotify.spotifySong(arg);
-		break;
-	case "movie-this":
-		// console.log(searchOMDB);
-		// console.log(typeof searchOMDB.omdbMovie);
-		searchOMDB.omdbMovie(arg);
-		break;
-	case "concert-this":
-		searchBands.getConcerts(arg);
-		break;
-	case "do-what-it-says":
-		liriSays();
-		break;
-    }
-}
+	})
 
-function liriSays(){
-	fs.readFile('random.txt', "utf8", function(err, data) {
-		if(err) {
-		console.log(err)
-		} else {
-		var splitData = data.split(",");
-		console.log(splitData);
-		switchFuncion(splitData[0],splitData[1]);
+	function Newsearch(input, arg) {
+
+		if (input === "Music concerts    /has to be existing consert"){
+			searchBands.getConcerts(arg)
 		}
-	});
-}
-
-switchFuncion(input, arg);
+		else if(input === "Song") {
+			searchSpotify.spotifySong(arg)
+		}
+		else if (input === "Movie"){
+			searchOMDB.omdbMovie(arg)
+		}
+	}
