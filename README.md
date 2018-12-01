@@ -21,13 +21,13 @@ To install all necessary npm packages run these commands in lir derectory:
 
 to run the file type node liri.js
 
-![to run the file type node liri.js](liri.js.PNG)
+![to run the file type node liri.js](pictures/liri.js.PNG)
 
 then choose one of the options 
 
-![coose option](options.PNG)
+![coose option](pictures/options.PNG)
 
 and get result
 
-![result](result.PNG)
+![result](pictures/result.PNG)
 
