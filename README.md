@@ -5,10 +5,10 @@ To install all necessary npm packages run these commands in lir derectory:
 
 ## You will need to crate a file .env to store the API keys
 
-* SPOTIFY_ID = c1cfc7163977477f8fc68d43e7b37017
-* SPOTIFY_SECRET = 46a8bafb53774805a8cd6d7d695853aa
+* SPOTIFY_ID = [key here]
+* SPOTIFY_SECRET = [key here]
 
-* BANDS_APP = 21efbfd1101fb06a92b91cd0eb7f48d7
+* BANDS_APP = [key here]
 
 
 ## API has beenused it this project
