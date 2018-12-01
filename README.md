@@ -1,21 +1,33 @@
 # Liri-  a node application.
 
-To install all necessary npm packages run these commands one at a time:
-* npm install bandsintown-events
-* npm install node-spotify-api
-* npm install request
-* npm install xhr2
-* npm install moment
+To install all necessary npm packages run these commands in lir derectory:
+* npm install 
 
-## Commands to run Liri:
-* -node liri.js concert-this '{Name of the Artist or Band}'
-* -node liri.js spotify-this-song '{Song name here}'
-* -node liri.js movie-this '{Movie name here}'
-* -node liri.js do-what-it-says (this will bring it to default song)
+## You will need to crate a file .env to store the API keys
 
-## API Credential sites
+* SPOTIFY_ID = c1cfc7163977477f8fc68d43e7b37017
+* SPOTIFY_SECRET = 46a8bafb53774805a8cd6d7d695853aa
+
+* BANDS_APP = 21efbfd1101fb06a92b91cd0eb7f48d7
+
+
+## API has beenused it this project
 * BandInTown: http://www.artists.bandsintown.com/bandsintown-api
 
 * Spotify: https://developer.spotify.com/my-applications/
 
 * OMDb API: http://www.omdbapi.com/apikey.aspx
+
+
+to run the file type node liri.js
+
+![to run the file type node liri.js](liri.js.PNG)
+
+then choose one of the options 
+
+![coose option](options.PNG)
+
+and get result
+
+![result](result.PNG)
+
